@@ -7,6 +7,7 @@ import Animate from 'rc-animate';
 import LazyRenderBox from './LazyRenderBox';
 import getScrollBarSize from './_util/getScrollBarSize';
 import assign from 'object-assign';
+import createReactClass from 'create-react-class';
 
 let uuid = 0;
 let openCount = 0;
@@ -50,7 +51,7 @@ function offset(el) {
   return pos;
 }
 
-const Layer = React.createClass({
+const Layer = createReactClass({
   getDefaultProps() {
     return {
       afterClose: noop,

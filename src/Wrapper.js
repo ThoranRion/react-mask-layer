@@ -1,10 +1,11 @@
 /* eslint-disable */
 
 import React, { ReactElement } from 'react';
+import createReactClass from 'create-react-class';
 import Dialog from './Layer';
 import getContainerRenderMixin from './_util/getContainerRenderMixin';
 
-const Wrapper = React.createClass({
+const Wrapper = createReactClass({
   mixins: [
     getContainerRenderMixin({
       isVisible(instance) {

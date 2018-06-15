@@ -3,13 +3,14 @@
 import React, { Component, PropTypes } from 'react';
 import addEventListener from './_util/addEventListener';
 import Wrapper from './Wrapper';
+import createReactClass from 'create-react-class';
 
 let mousePosition;
 let mousePositionEventBinded;
 
 function noop() {}
 
-const MaskLayer = React.createClass({
+const MaskLayer = createReactClass({
 
   propTypes: {
     prefixCls: PropTypes.string,

@@ -2,8 +2,9 @@
 
 import React from 'react';
 import assign from 'object-assign';
+import createReactClass from 'create-react-class';
 
-const LazyRenderBox = React.createClass({
+const LazyRenderBox = createReactClass({
   shouldComponentUpdate(nextProps) {
     return !!nextProps.hiddenClassName || !!nextProps.visible;
   },
