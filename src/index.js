@@ -1,6 +1,7 @@
 /* eslint-disable */
 
-import React, { Component, PropTypes } from 'react';
+import React  from 'react';
+import PropTypes from 'prop-types';
 import addEventListener from './_util/addEventListener';
 import Wrapper from './Wrapper';
 import createReactClass from 'create-react-class';
