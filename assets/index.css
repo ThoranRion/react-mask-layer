@@ -1,0 +1,112 @@
+.mx-mask {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.mx-mask-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #373737;
+  background-color: rgba(55, 55, 55, 0.6);
+  height: 100%;
+  filter: alpha(opacity=50);
+  z-index: 1050;
+}
+.mx-mask-mask-hidden {
+  display: none;
+}
+.mx-mask-fade-enter,
+.mx-mask-fade-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.mx-mask-fade-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.mx-mask-fade-enter.mx-mask-fade-enter-active,
+.mx-mask-fade-appear.mx-mask-fade-appear-active {
+  animation-name: mxMaskFadeIn;
+  animation-play-state: running;
+}
+.mx-mask-fade-leave.mx-mask-fade-leave-active {
+  animation-name: mxMaskFadeOut;
+  animation-play-state: running;
+}
+@keyframes mxMaskFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mxMaskFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.mx-mask-wrap {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.mx-mask-zoom-enter,
+.mx-mask-zoom-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation-play-state: paused;
+}
+.mx-mask-zoom-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  animation-play-state: paused;
+}
+.mx-mask-zoom-enter.mx-mask-zoom-enter-active,
+.mx-mask-zoom-appear.mx-mask-zoom-appear-active {
+  animation-name: mxMaskZoomIn;
+  animation-play-state: running;
+}
+.mx-mask-zoom-leave.mx-mask-zoom-leave-active {
+  animation-name: mxMaskZoomOut;
+  animation-play-state: running;
+}
+@keyframes mxMaskZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes mxMaskZoomOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
