@@ -13,14 +13,14 @@
     "assets/*.css",
     "assets/*.less"
   ],
-  "homepage": "https://github.com/alcat2008/react-mask-layer#readme",
+  "homepage": "https://github.com/ThoranRion/react-mask-layer#readme",
   "author": "alcat2008",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alcat2008/react-mask-layer.git"
+    "url": "git+https://github.com/ThoranRion/react-mask-layer.git"
   },
   "bugs": {
-    "url": "https://github.com/alcat2008/react-mask-layer/issues"
+    "url": "https://github.com/ThoranRion/react-mask-layer/issues"
   },
   "license": "MIT",
   "main": "./lib/index",
@@ -42,7 +42,8 @@
   "dependencies": {
     "add-dom-event-listener": "^1.0.1",
     "rc-animate": "^2.3.1",
-    "babel-runtime": "6.x"
+    "babel-runtime": "6.x",
+    "create-react-class": "^15.6.3"
   },
   "devDependencies": {
     "expect.js": "0.3.x",
@@ -51,8 +52,7 @@
     "rc-tools": "5.x",
     "react": "16.x",
     "react-addons-test-utils": "15.x",
-    "react-dom": "16.x",
-    "create-react-class": "^15.6.3"
+    "react-dom": "16.x"
   },
   "pre-commit": [
     "lint"
